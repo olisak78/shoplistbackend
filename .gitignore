@@ -1,0 +1,8 @@
+/bin
+/obj
+*.csproj.user
+*.pdb
+*.exe
+*.dll
+appsettings.Development.json
+.env

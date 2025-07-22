@@ -1,0 +1,6 @@
+@shoplistbackend_HostAddress = http://localhost:5220
+
+GET {{shoplistbackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
