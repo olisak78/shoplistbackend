@@ -11,44 +11,59 @@ Visual Studio Code (optional): For editing and running the project.
 ### Installation
 
 #### Clone the Repository:
-```git clone https://github.com/olisak78/shoplistbackend.git
+```bash
+git clone https://github.com/olisak78/shoplistbackend.git
 cd shoplistbackend
 ```
-Restore Dependencies:
+#### Restore Dependencies:
+```bash
 dotnet restore
+```
 
-Configure Database Connection:
+#### Configure Database Connection:
 
-Open appsettings.json and ensure the connection string is set for SQL Server Express:{
+Open appsettings.json and ensure the connection string is set for SQL Server Express:
+```json
+{
 "ConnectionStrings": {
 "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=shoppinglist;Trusted_Connection=True;TrustServerCertificate=True;"
 }
 }
-
+```
 If using a different SQL Server instance, update the Server value.
 
-Apply Database Migrations:
+#### Apply Database Migrations:
 
-Ensure the Entity Framework Core CLI is installed:dotnet tool install --global dotnet-ef
-
-Create and apply migrations:dotnet ef migrations add InitialCreate
+Ensure the Entity Framework Core CLI is installed:
+```bash
+dotnet tool install --global dotnet-ef
+```
+Create and apply migrations:
+```bash
+dotnet ef migrations add InitialCreate
 dotnet ef database update
-
+```
 This creates the shoppinglist database with seeded categories (e.g., Fruits, Vegetables, Beverages) and products.
 
-Running the Application
+### Running the Application
 
-Start the API:
+#### Start the API:
+```bash
 dotnet run
-
+```
 The API runs at http://localhost:5000.
 
-Test Endpoints:
+#### Test Endpoints:
 
-Get categories:curl http://localhost:5000/api/categories
-
+Get categories:
+```bash
+curl http://localhost:5000/api/categories
+```
 Example output: ["Fruits","Vegetables","Beverages"]
-Get products for a category (e.g., Fruits, ID 1):curl http://localhost:5000/api/products/1
+Get products for a category (e.g., Fruits, ID 1):
+```bash
+curl http://localhost:5000/api/products/1
+```
 
 Example output: ["Apples","Oranges"]
 
