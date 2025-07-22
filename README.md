@@ -1,19 +1,19 @@
-### Shoplist Backend
+## Shoplist Backend
 This is a .NET 8 Web API that provides endpoints for managing categories and products for a shopping list application. It uses Entity Framework Core with SQL Server Express to store data.
 
-## Prerequisites
+### Prerequisites
 
 .NET 8 SDK: Install from https://dotnet.microsoft.com/download/dotnet/8.0.
 SQL Server Express: Install from https://www.microsoft.com/en-us/sql-server/sql-server-downloads.
 Git: Install from https://git-scm.com/download/win.
 Visual Studio Code (optional): For editing and running the project.
 
-Installation
+### Installation
 
-Clone the Repository:
-git clone https://github.com/olisak78/shoplistbackend.git
+#### Clone the Repository:
+```git clone https://github.com/olisak78/shoplistbackend.git
 cd shoplistbackend
-
+```
 Restore Dependencies:
 dotnet restore
 
