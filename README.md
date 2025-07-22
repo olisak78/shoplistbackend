@@ -25,9 +25,9 @@ dotnet restore
 Open appsettings.json and ensure the connection string is set for SQL Server Express:
 ```json
 {
-"ConnectionStrings": {
-"DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=shoppinglist;Trusted_Connection=True;TrustServerCertificate=True;"
-}
+ "ConnectionStrings": {
+  "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=shoppinglist;Trusted_Connection=True;TrustServerCertificate=True;"
+  }
 }
 ```
 If using a different SQL Server instance, update the Server value.
@@ -67,15 +67,15 @@ curl http://localhost:5000/api/products/1
 
 Example output: ["Apples","Oranges"]
 
-Project Structure
+### Project Structure
 
-Data/ShopListDbContext.cs: Entity Framework Core context with seed data.
-Controllers/CategoriesController.cs: API endpoints for categories and products.
-Models/: Entity classes (Category, Product).
-Migrations/: EF Core migration files.
+- Data/ShopListDbContext.cs: Entity Framework Core context with seed data.
+- Controllers/CategoriesController.cs: API endpoints for categories and products.
+- Models/: Entity classes (Category, Product).
+- Migrations/: EF Core migration files.
 
-Notes
+### Notes
 
-The .gitignore file excludes bin/, obj/, and appsettings.Development.json to prevent uploading sensitive data.
-Ensure SQL Server Express is running before starting the API.
-The API supports CORS for the frontend at http://localhost:3000.
+- The .gitignore file excludes bin/, obj/, and appsettings.Development.json to prevent uploading sensitive data.
+- Ensure SQL Server Express is running before starting the API.
+- The API supports CORS for the frontend at http://localhost:3000.
